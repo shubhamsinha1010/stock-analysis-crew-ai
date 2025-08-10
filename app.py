@@ -35,10 +35,6 @@ if st.button("Analyze"):
             st.error("Unexpected result type.")
             st.stop()
 
-        # Show raw JSON for debugging (optional)
-        with st.expander("🔍 Raw AI Response JSON"):
-            st.json(result_dict)
-
         if not tasks_output or len(tasks_output) < 2:
             st.error("The AI did not return the expected tasks output.")
             st.stop()
